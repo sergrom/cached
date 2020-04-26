@@ -1,0 +1,9 @@
+db:
+  host: localhost
+  socket: /var/run/mysqld/mysqld.sock
+  user: sergey
+  password: 12345678
+  database: best_practices
+server:
+  invalidate_cache_period: 300
+  json_rpc_socket: /tmp/cached_service.sock

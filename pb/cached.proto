@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option go_package = ".;cached";
+
+// The greeting service definition.
+service Cached {
+  rpc GetUserById (GetUserByIdReq) returns (GetUserByIdResp) {}
+  rpc GetUserList (GetUserListReq) returns (GetUserListResp) {}
+}
+
+message User {
+  int32 id = 1;
+  string name = 2;
+}
+
+message GetUserByIdReq {
+	int32 id = 1;
+}
+
+message GetUserByIdResp {
+	User user = 1;
+}
+
+message GetUserListReq {
+
+}
+
+message GetUserListResp {
+	repeated User user_list = 1;
+}
